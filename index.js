@@ -280,9 +280,9 @@ app.get('/hotels/filter/category', (req, res) => {
   let result = hotels.filter((hotel) => filterByCategory(hotel, category));
   res.json({ hotels: result });
 });
-
+hotels=copyHotel;
 app.get('/hotels', (req, res) => {
-  res.json({ hotels:copyHotel });
+  res.json({ hotels });
 });
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
