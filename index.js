@@ -282,7 +282,7 @@ app.get('/hotels/filter/category', (req, res) => {
 });
 
 app.get('/hotels', (req, res) => {
-  res.json({ copyHotel });
+  res.json({ hotels:copyHotel });
 });
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
